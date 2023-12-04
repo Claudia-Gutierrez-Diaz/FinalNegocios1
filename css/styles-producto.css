@@ -1,0 +1,73 @@
+:root{
+    --gris: rgb(235, 234, 234);
+    --gris2: #676767;
+    --gris3: #2d2d2d;
+    --blanco: #ffffff;
+    --negro: #232222;
+    --azul: #0a90ca;
+}
+
+
+.seccion_1-main{
+    margin-top: 3rem;
+    margin-left: 7rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.seccion_1-main img{
+    height: 45rem;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+    margin-left: 5rem;
+}
+
+.seccion_1-main div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-right: 15rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+span, label{
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.boton-comprar{
+    background-color: var(--azul);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.boton-comprar:hover{
+    cursor: pointer;
+}
+
+.seccion_2-main{
+    margin-top: 4rem;
+    margin-left: 5rem;
+    margin-right: 15rem;
+}
+.seccion_3-main{
+
+    margin-left: 35rem;
+    margin-right: 10rem;
+    
+}
+
+.parrafo{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+main{
+    height:fit-content;
+}
+
