@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lideres en personalizacion y venta de articulos para fiesta.">
+  <meta name="keywords" content="globos, disfraces, termos, eventos">
+  <meta name="author" content="Puffuliz">
+  <meta name="publisher" content="Puffuliz">
+	<title>Puffuliz</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="catalogojs.js"></script>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            LeerDatos();
+        }
+    </script> 
+
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+        <a class="navbar-brand" href="index.html" title="Puffuliz">
+      <img src="imgs/Logo tienda.jpg" width="174" height="150" alt="Gunsntracks" title="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   	 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html" title="Inicio">Inicio</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="catalogo.html" title="todos los productos">Todos los productos</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+    <a class="navbar-brand" href="avisoregistro.html" title="carrito de compras">
+      <img src="imgs/carrito.png" width="30" height="24" alt="carrito" title="carrito">
+    </a>
+    <a class="btn btn-outline-primary" href="form.html">Iniciar sesión </a>
+</nav>
+
+<div class="container">
+	<div class="row justify-content-md-center">
+		<div style="width:95%; padding: 10px;" >
+      <ul class="nav nav-pills" style="padding:10px">
+        <li class="nav-item">
+          <div class="d-flex">
+            <input class="form-control me-2" type="text" id="busqueda" placeholder="Buscar en catalogo" aria-label="Search" onkeyup="bus()">
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-current="page" href="#">Ordenar por:</a>
+        </li>
+        <li class="nav-item">
+          <select class="form-select" aria-label="Default select example" id="orden" onchange="orderby()">
+            <option selected  value="0">A-Z</option>
+            <option value="1">Z-A</option>
+            <option value="2">$-$$$</option>
+            <option value="3">$$$-$</option>
+          </select>
+        </li>
+                                     
+      </ul>
+<div class="container" id="prod_des">
+  <div class="row" >
+    <div class="col">
+      <div class="card">
+  <img src="imgs/img1.jpg" class="card-img-top" alt="paquete 1: 2 Vasos tipo Starbuks, con vaso acrilico" title="Vaso1">
+  <div class="card-body">
+    <h5 class="card-title">Paquete 1: 2 Vasos tipo Starbuks, con vaso acrilico</h5>
+    <p class="card-text">$250</p>
+    <a href="" class="btn btn-primary" title="Paquete 1">Ver detalles</a>
+  </div>
+</div>
+    </div>
+    <div class="col">
+      <div class="card">
+  <img src="imgs/img2.jpg" class="card-img-top" alt="paquete evento sencillo" title="Vaso1">
+  <div class="card-body">
+    <h5 class="card-title">Paquete evento sencillo: 10 centros de mesa globo burbuja, guirnalda 2 metros, luces y cortinas</h5>
+    <p class="card-text">$2000</p>
+    <a href="" class="btn btn-primary" title="Paquete 2">Ver detalles</a>
+  </div>
+</div>
+    </div>
+    <div class="col">
+      <div class="card">
+  <img src="imgs/img3.jpg" class="card-img-top" alt="Vaso cristal" title="Vaso1">
+  <div class="card-body">
+    <h5 class="card-title">Vaso de cristal con tapa de bamboo, decoración calabaza</h5>
+    <p class="card-text">$350</p>
+    <a href="" class="btn btn-primary" title="vaso cristal ">Ver detalles</a>
+  </div>
+</div>
+    </div>
+    <div class="col">
+      <div class="card">
+  <img src="imgs/img4.jpg" class="card-img-top" alt="termo1" title="Vaso1">
+  <div class="card-body">
+    <h5 class="card-title">Termo acero inoxidable, 1.5 litros decoracion mersonalizada</h5>
+    <p class="card-text">$450</p>
+    <a href="" class="btn btn-primary" title="termo1">Ver detalles</a>
+  </div>
+</div>
+    </div>
+    <div class="col">
+      <div class="card">
+  <img src="imgs/img5.jpg" class="card-img-top" alt="Burbuja Chica" title="Vaso1">
+  <div class="card-body">
+    <h5 class="card-title">Burbuja chica, con frase y diseño personalizado</h5>
+    <p class="card-text">$200</p>
+    <a href="" class="btn btn-primary" title="burbuja 1">Ver detalles</a>
+  </div>
+</div>
+    </div>
+    <div class="col">
+      <div class="card">
+  <img src="imgs/img6.jpg" class="card-img-top" alt="Arreglo floral chico" title="Vaso1">
+  <div class="card-body">
+    <h5 class="card-title">PArreglo floral chico, variedad de flores de temporada</h5>
+    <p class="card-text">$350</p>
+    <a href="" class="btn btn-primary" title="Areglo floral chico">Ver detalles</a>
+  </div>
+</div>
+    </div>
+    <div class="col">
+      <div class="card">
+  <img src="imgs/img7.jpg" class="card-img-top" alt="Caja 20x20" title="Vaso1">
+  <div class="card-body">
+    <h5 class="card-title">Caja de cartón 20 x 20x 20 cm</h5>
+    <p class="card-text">$35</p>
+    <a href="" class="btn btn-primary" title="Caja 1">Ver detalles</a>
+  </div>
+</div>
+    </div>
+    <div class="col">
+      <div class="card">
+  <img src="imgs/img8.jpg" class="card-img-top" alt="Vaso cristal 2" title="Vaso1">
+  <div class="card-body">
+    <h5 class="card-title">Vaso cristal 15 oz, personalizable, en caja de carton y con liston</h5>
+    <p class="card-text">$170</p>
+    <a href="" class="btn btn-primary" title="vaso 2">Ver detalles</a>
+  </div>
+</div>
+    </div>
+    <div class="col">
+      <div class="card">
+  <img src="imgs/disfraz1.jpg" class="card-img-top" alt="disfraz 1" title="Vaso1">
+  <div class="card-body">
+    <h5 class="card-title">Disfraz inflable marciano</h5>
+    <p class="card-text">$950</p>
+    <a href="producto.html" class="btn btn-primary" title="disfraz 1">Ver detalles</a>
+  </div>
+</div>
+    </div>
+    <div class="col">
+      <div class="card">
+  <img src="imgs/milky.jpg" class="card-img-top" alt="chocolate1" title="Vaso1">
+  <div class="card-body">
+    <h5 class="card-title">Paquete de chocolate</h5>
+    <p class="card-text">$250</p>
+    <a href="" class="btn btn-primary" title="Chocolate11">Ver detalles</a>
+  </div>
+</div>
+    </div>
+
+  </div>
+</div>
+<footer>
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" href="about.html" title="about" target="_blank">Acerca de nosotros</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="legals.html" title="legals" target="_blank">Aviso legal</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link"  href="https://www.facebook.com/PuffuLiz?mibextid=ZbWKwL"
+     title="Puffuliz facebook" target="_blank">Facebook</a>
+  </li>
+</ul>
+<p class="text-center">Puffuliz™</p>
+</footer>		
+</div>
+
+
+</body>
+
+<script type="text/javascript">
+
+</script>
+</html>
