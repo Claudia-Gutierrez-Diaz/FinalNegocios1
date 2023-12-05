@@ -23,7 +23,7 @@
 }
 
 .seccion_1-main div{
-    /*display: flexy;*/
+    display: flexy;
     flex-direction: row;
     justify-content: flex-start;
     margin-right: 15rem;
