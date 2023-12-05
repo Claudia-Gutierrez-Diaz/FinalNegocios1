@@ -1,0 +1,85 @@
+[
+    {
+        "id": 1,
+        "nombre": "Vaso tipo Starbucks",
+        "cantidad": "50",
+        "descripcion": "Vaso texturizado 710 ml plástico libre de BPA, con tapa y popote, doble línea de rosca para un buen sellado disfruta de bebidas frías o calientes",
+        "precio": "$250.00", 
+        "imagen": "imgs/img1.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Vaso Cristal con Tapa",
+        "cantidad": "20",
+        "descripcion": "Vaso de cristal con tapa de bamboo, decoración calabaza",
+        "precio": "$350.00",
+        "imagen": "imgs/img3.jpg"
+        
+    },
+    {
+        "id": 3,
+        "nombre": "Termo de acero inoxidable",
+        "cantidad": "10",
+        "descripcion": "Termo de acero inoxidable 1.5 Lts, decoracion personalizada.",
+        "precio": "$450.00",
+        "imagen": "imgs/img4.jpg"
+
+    },
+    {
+        "id": 4,
+        "nombre": "Vaso de Cristal 15 Oz",
+        "cantidad": "20",
+        "descripcion": "Vaso de Cristal 15 Oz, personalizable con caja de carton y liston",
+        "precio": "$170.00",
+        "imagen": "imgs/img8.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Centro de mesa",
+        "cantidad": "20",
+        "descripcion": "Centro de mesa",
+        "precio": "$2,000.00",
+        "imagen": "img/mascarillas.png"
+    },
+    {
+        "id": 6,
+        "nombre": "Arreglo Floral",
+        "cantidad": "14",
+        "descripcion": "Arreglos florales, diversidad de flores",
+        "precio": "$350.00",
+        "imagen": "imgs/img6.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Burbuja chica",
+        "cantidad": "2",
+        "descripcion": "Burbuja chica, con frase y diseño personalizado.",
+        "precio": "$200.00",
+        "imagen": "imgs/img5.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Caja de carton ",
+        "cantidad": "5",
+        "descripcion": "Caja de carton",
+        "precio": "$35.00",
+        "imagen": "imgs/img7.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "Chocolates Milky",
+        "cantidad": "14",
+        "descripcion": "Chocolates",
+        "precio": "$250.00",
+        "imagen": "imgs/milky.jpg"
+    },
+    {
+        "id": 10,
+        "nombre": "Disfraz inflable",
+        "cantidad": "14",
+        "descripcion": "Disfraz Inflable Alien Adulto Rack & Pack Traje Ovni",
+        "precio": "$699.00",
+        "imagen": "imgs/disfraz1.jpg"
+        
+    }
+]
