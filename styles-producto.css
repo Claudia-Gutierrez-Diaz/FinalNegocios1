@@ -77,7 +77,8 @@ main{
     width: 300px;
     
     background-color: #979797;
-   
+    margin-top: 32px;
+    margin-right: 200px;
     position:fixed;
     margin-right: 8px; /* Ajusta según sea necesario */
     top: 100; /* Ajusta según sea necesario */
@@ -89,7 +90,8 @@ main{
 #myDiv2 {
     display: none;
     width: 300px;
-    
+    margin-top: 32px;
+    margin-right: 500px;
     background-color: #979797;
    
     position:fixed;
