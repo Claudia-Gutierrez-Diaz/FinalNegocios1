@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lista de clientes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Estilos/clientes.css">
+    <script src="leerDatosClientes.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Lista de clientes</h1>
+    </header>
+    <main>
+        <form class="formulario">
+            <label for="nombre">Nombre:</label> <!-- Cambié el nombre del campo de "producto" a "nombre" -->
+            <input type="text" id="nombre" name="nombre"><br><br>
+            <label for="apellido">Apellido:</label> <!-- Cambié el nombre del campo de "desCorta" a "apellido" -->
+            <input type="text" id="apellido" name="apellido"><br><br>
+            <label for="correo">Correo electrónico:</label> <!-- Cambié el nombre del campo de "desLarga" a "correo" -->
+            <input type="text" id="correo" name="correo"><br><br>
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono"><br><br>
+
+            <div class="botones">
+                <input type="button" value="Agregar" onclick="agregarCliente()" id="agregar"> <!-- Cambié el nombre de la función de "agregarProducto" a "agregarCliente" -->
+                <input type="button" value="Guardar cambios" onclick="guardarCambios()" id="editar"
+                    style="display:none">
+            </div>
+        </form>
+
+        <h2>Clientes Agregados</h2> <!-- Cambié el título de "Productos Agregados" a "Clientes Agregados" -->
+        <table id="tablaClientes"> <!-- Cambié el ID de "tablaProductos" a "tablaClientes" -->
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+</body>
+
+</html>

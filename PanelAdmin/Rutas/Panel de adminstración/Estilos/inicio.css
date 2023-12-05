@@ -1,0 +1,175 @@
+:root{
+    --gris: rgb(235, 234, 234);
+    --gris2: #676767;
+    --gris3: #2d2d2d;
+    --blanco: #ffffff;
+    --negro: #232222;
+    --azul: #0a90ca;
+    --enlace_hover: #0074a5;
+    --color-fuente: rgb(22, 16, 63);
+    --fondo-tarjeta: #087aac;
+    --resaltar: rgb(0, 222, 238);
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: var(--gris);
+    padding: 0;
+    margin: 0;
+    font-family: "Krub";
+}
+
+header{
+    padding-left: 5%;
+    color: var(--color-fuente);
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--color-fuente);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header a{
+    margin-top: 2%;
+    margin-right: 5%;
+    color: var(--color-fuente);
+}
+
+nav{
+    padding-top: 2%;
+    padding-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tarjeta-nav{
+    border-radius: 1rem;
+    width: 20%;
+    background-color: var(--fondo-tarjeta);
+    cursor: pointer;
+}
+
+.tarjeta-nav:hover{
+    background-color: var(--resaltar);
+}
+
+.ultima-tarjeta{
+    margin-right: 3%;
+}
+
+.tarjeta-nav p{
+    font-size: 1.6rem;
+    color: white;
+    font-weight: bold;
+}
+
+.porcentaje, .ordenes{
+    padding: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10%;
+}
+
+.porcentaje{
+    background-color: var(--azul);
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.ordenes p{
+    padding-right: 3%;
+}
+
+.p-porcentaje{
+    margin-left: 1%;
+}
+
+.numero{
+    font-size: 2rem;
+}
+
+img{
+    width: 95%;
+}
+
+.mapa-ventas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 8%;
+    margin-left: 5%;
+}
+
+.mapa-ventas p{
+    padding-top: 1%;
+    font-size: 2rem;
+    color: white;
+}
+
+.texto-cuadro{
+    border-bottom: 1px solid var(--color-fuente);
+    margin: 0;
+    margin-right: 5.1%;
+    background-color: var(--gris2);
+    text-align: center;
+}
+
+.actividad-box{
+    width: 30%;
+    margin-left: 5%;
+}
+
+.modificar-p{
+    border-bottom: 1px solid black;
+    margin: 0;
+    font-size: 1.6rem;
+    padding-left: 5%;
+    color: white;
+    background-color: var(--gris2);
+}
+
+.resultados{
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    background-color: white;
+}
+
+
+.img-pedidos{
+    width: 100%;
+}
+
+.pedidos-box{
+    width: 60%;
+    margin-right: 3%;
+}
+
+.actividad-pedidos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+
+
+
+
+
+
+

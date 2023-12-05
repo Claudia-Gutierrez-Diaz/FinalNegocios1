@@ -1,0 +1,28 @@
+:root{
+    --gris: rgb(235, 234, 234);
+    --gris2: #676767;
+    --gris3: #2d2d2d;
+    --blanco: #ffffff;
+    --negro: #232222;
+    --azul: #0a90ca;
+    --enlace_hover: #0074a5;
+}
+
+body{
+    background-color: rgb(247, 247, 247);
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1{
+    font-size: 20px;
+}
+
