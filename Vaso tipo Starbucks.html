@@ -23,8 +23,9 @@
 
 <body>
     <header>
-        <div class="header-seccion1">
-            <a href="#" class="enlace-hs1">
+        <div class="header-seccion1" class="top-navbar">
+
+            <a href="#" class="enlace-hs1" class="nav-left">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="20" height="20"
                     viewBox="0 0 24 24" stroke-width="1.5" stroke="#676767" fill="none" stroke-linecap="round"
                     stroke-linejoin="round">
@@ -34,10 +35,11 @@
                 </svg>
                 Mi cuenta
             </a>
-            <a href="#" class="enlace-hs1">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart-filled" width="20"
-                    height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#676767" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+            <!--BOTONES NAV-->
+            <a href="#" class="enlace-hs1" class="add-to-wishlist" onclick="toggleModal()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart-filled" width="20" height="20"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="#676767" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path
                         d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
@@ -45,7 +47,8 @@
                 </svg>
                 Lista de deseos
             </a>
-            <a href="#" class="enlace-hs1">
+
+            <a href="#" class="enlace-hs1" class="add-to-cart" onclick="toggleDiv()">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="20"
                     height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#676767" fill="none"
                     stroke-linecap="round" stroke-linejoin="round">
@@ -57,7 +60,22 @@
                 </svg>
                 Carrito de compras
             </a>
+        </div>
 
+        <div id="myDiv">
+            Carrito
+            <div id="cart">
+                <h2>Carrito de compras</h2>
+                <ul id="cart-items"></ul>
+                <p>Total: $<span id="cart-total">0</span></p>
+            </div>
+        </div>
+        <div id="myDiv2">
+            Deseos
+            <div id="wishlist">
+                <h2>Lista de Deseos</h2>
+                <ul id="wishlist-items"></ul>
+            </div>
         </div>
 
         <div class="header-seccion2">
@@ -116,12 +134,14 @@
         <section class="seccion_1-main">
 
             <img src="imgs/img1.jpg" alt="Vaso tipo Starbucks">
-            <div>
+            <div class="product" data-product-id="7" data-product-name="Vaso tipo Starbucks" data-product-price="250">
                 <p>
-                    Vaso tipo Starbucks
+                    <h3>Vaso tipo Starbucks</h3>
                     <br><br><span>Codigo del Producto: A035 <br> Disponiblidad: 99</span> <br>
-                    $250 <br> <br>
-                    <button>
+                    <p>Precio: $250</p> <br> <br>
+                    
+                    <!--BOTONES-->
+                    <button class="add-to-wishlist">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="24"
                             height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#676767" fill="none"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -129,7 +149,7 @@
                             <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
                         </svg>
                     </button>
-                    <button>
+                    <button class="add-to-cart">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-switch-horizontal"
                             width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#676767" fill="none"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -239,7 +259,115 @@
             }
 
         }).render('#paypal-button-container')
+
+  //CARRITO Y DESEOS//
+
+//PARA QUE LOS DIV SE OCULTEN ESTE//
+function toggleDiv() {
+  var div = document.getElementById('myDiv');
+  if (div.style.display === 'none' || div.style.display === '') {
+      div.style.display = 'block';
+  } else {
+      div.style.display = 'none';
+  }
+}
+function toggleModal() {
+  var div = document.getElementById('myDiv2');
+  if (div.style.display === 'none' || div.style.display === '') {
+      div.style.display = 'block';
+  } else {
+      div.style.display = 'none';
+  }
+}
+
+
+//PARA CARRITO ESTE
+document.addEventListener('DOMContentLoaded', function() {
+  const addToCartButtons = document.querySelectorAll('.add-to-cart');
+  const addToWishlistButtons = document.querySelectorAll('.add-to-wishlist');
+  const cartItemsList = document.getElementById('cart-items');
+  const wishlistItemsList = document.getElementById('wishlist-items');
+  const cartTotalSpan = document.getElementById('cart-total');
+  let cartTotal = 0;
+
+  addToCartButtons.forEach(button => {
+      button.addEventListener('click', addToCart);
+  });
+
+  addToWishlistButtons.forEach(button => {
+      button.addEventListener('click', addToWishlist);
+  });
+
+  function addToCart(event) {
+      const product = event.target.closest('.product');
+      const productId = product.dataset.productId;
+      const productName = product.dataset.productName;
+      const productPrice = parseFloat(product.dataset.productPrice);
+
+      // Verificar si el producto ya está en el carrito
+      const existingCartItem = document.querySelector(`#cart-items li[data-product-id="${productId}"]`);
+
+      if (existingCartItem) {
+          // Si ya está en el carrito, solo actualizar la cantidad
+          const quantitySpan = existingCartItem.querySelector('.quantity');
+          const quantity = parseInt(quantitySpan.innerText) + 1;
+          quantitySpan.innerText = quantity;
+
+      } else {
+          // Si no está en el carrito, agregar un nuevo elemento de lista
+          const cartItem = document.createElement('li');
+          cartItem.dataset.productId = productId;
+          cartItem.innerHTML = `${productName} (ID: ${productId}) - <span class="quantity">1</span> 
+                               <button class="remove-from-cart">X</button>`;
+          cartItemsList.appendChild(cartItem);
+
+          // Agregar evento para eliminar del carrito
+          const removeButton = cartItem.querySelector('.remove-from-cart');
+          removeButton.addEventListener('click', removeFromCart.bind(null, cartItem, productPrice));
+      }
+
+      // Actualizar el total del carrito
+      cartTotal += productPrice;
+      cartTotalSpan.innerText = cartTotal.toFixed(2); // Mostrar dos decimales
+  }
+  function addToWishlist(event) {
+      const product = event.target.closest('.product');
+      const productId = product.dataset.productId;
+      const productName = product.dataset.productName;
+
+      // Verificar si el producto ya está en la lista de deseos
+      const existingWishlistItem = document.querySelector(`#wishlist-items li[data-product-id="${productId}"]`);
+
+      if (!existingWishlistItem) {
+          // Si no está en la lista de deseos, agregar un nuevo elemento de lista
+          const wishlistItem = document.createElement('li');
+          wishlistItem.dataset.productId = productId;
+          wishlistItem.innerHTML = `${productName} (ID: ${productId}) 
+                                   <button class="remove-from-wishlist">X</button>`;
+          wishlistItemsList.appendChild(wishlistItem);
+
+          // Agregar evento para eliminar de la lista de deseos
+          const removeButton = wishlistItem.querySelector('.remove-from-wishlist');
+          removeButton.addEventListener('click', removeFromWishlist.bind(null, wishlistItem));
+      }
+  }
+  function removeFromCart(cartItem, productPrice) {
+      const productId = cartItem.dataset.productId;
+      cartItem.remove();
+
+      // Actualizar el total del carrito
+      cartTotal -= productPrice;
+      cartTotalSpan.innerText = cartTotal.toFixed(2);
+  }
+
+  function removeFromWishlist(wishlistItem) {
+      wishlistItem.remove();
+  }
+});
+
+
     </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
