@@ -6,20 +6,17 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script type="text/javascript">
-   var correo="";
-   var pass="";
-   function auto(argument) {
-     correo= document.getElementById("inputEmail4").value.toLowerCase();
-     pass= document.getElementById("inputPassword4").value;
-      console.log(correo,pass);
-    if(correo==="claudiia@gmail.com" && pass==="contra"){
+  
+  function auto(argument) {
+    correo= document.getElementById("inputEmail4").value.toLowerCase();
+    pass= document.getElementById("inputPassword4").value;
+     console.log(correo,pass);
+     window.location.href="file:///C:/xampp/htdocs/Puffuliz-main/indexlogin.html"
+   if(correo=="claudiia@gmail.com" && pass==="contra"){
+   alert ("Inicio de sesion correcto")
+   }else 
+   location.replace("  file:///C:/xampp/htdocs/Puffuliz-main/login.html");
    
-           alert("Sesión iniciada con exito");
-           location.replace("https://www.google.com/");
-    }else 
-        alert("Alguno de los datos estan incorrectos")
-        parent.href="https://www.google.com/";
-  }
 </script>
 </head>
 <body style="background-image: url(imgs/logo.jpg); background-repeat: no-repeat;background-position: center; background-size: cover;">
@@ -35,10 +32,11 @@
     <input type="password" class="form-control" id="inputPassword4">
   </div>
     <div class="col-6 ">
-      <button class="btn btn-primary" onclick="auto()">Iniciar sesión</button>
+      <p><a class="link" href="indexlogin.html">Iniciar sesion</a></p>
     </div>
   <div class="col-6 ">
       <p>¿No tienes una cuenta?,<a class="link" href="registro.html">Regístrate aquí</a></p>
+
   </div> 
   <div class="col-12 ">
       <a class="btn btn-outline-primary"  href="index.html">←</a>
