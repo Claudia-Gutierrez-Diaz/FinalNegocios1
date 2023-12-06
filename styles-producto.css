@@ -23,7 +23,7 @@
 }
 
 .seccion_1-main div{
-    display: flexy;
+    display: flex;
     flex-direction: row;
     justify-content: flex-start;
     margin-right: 15rem;
@@ -71,50 +71,3 @@ main{
     height:fit-content;
 }
 
-/*CARRITO Y DESEOS*/
-#myDiv {
-    display: none;
-    width: 300px;
-    
-    background-color: #979797;
-    margin-top: 32px;
-    margin-right: 200px;
-    position:fixed;
-    margin-right: 8px; /* Ajusta según sea necesario */
-    top: 100; /* Ajusta según sea necesario */
-    right: 0; /* Hace que el div esté en la esquina superior derecha */
-
-    /*AQUI*/  
-}
-
-#myDiv2 {
-    display: none;
-    width: 300px;
-    margin-top: 32px;
-    margin-right: 500px;
-    background-color: #979797;
-   
-    position:fixed;
-    margin-right: 8px; /* Ajusta según sea necesario */
-    top: 100; /* Ajusta según sea necesario */
-    right: 0; /* Hace que el div esté en la esquina superior derecha */
-
-    /*AQUI*/  
-}
-
-/* Estilos opcionales para dar formato al carrito y la lista de deseos */
-#cart, #wishlist {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 10px;
-}
-
-/* Estilos adicionales para resaltar elementos eliminables */
-li {
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-li:hover {
-    background-color: #f5f5f5;
-}
