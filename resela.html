@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="datos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            datos();
+        };
+    </script> 
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+        <a class="navbar-brand" href="#" title="Guns'n tracks">
+      <img src="./imgs/logo.jpg" width="174" height="150" alt="Puffuliz" title="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a href="perfil.html" class="enlace-hs1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#676767" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+        </svg>
+        Claudia Gutierrez
+    </a>
+  </div>
+    <button class="btn btn-outline-success" onclick="formAgregar()">Agregar reseña</button>
+
+</nav>
+<div class="container">
+	<div class="row">
+		<div class="col-12" style="display: none;" id="Form">
+      <div class="row">
+        <div class="col-3">
+          <label class="form-label">Nombre: </label>
+          <input type="text" name="" id="nNombre" class="form-control">
+        </div>
+        <div class="col-3">
+          <label class="form-label">Reseña:</label>
+          <input type="text" name="" id="nPrecio" class="form-control">          
+        </div>
+        <div class="col-6">
+          <label class="form-label">Imagen:</label>
+          <input type="file" name="" class="form-control" id="nImagen">
+        </div>
+      </div> 
+     
+          <label class="form-label">Guardar datos:</label>
+          <button class="btn btn-success" id="btnGuardar">Guardar</button>
+        </div>
+      </div>
+    </div>
+    <div  class="col-12"style="padding: 20px">
+      <table class="table table-striped" id="tabla">
+      <th>Nombre de usuario</th>
+      <th>detalles</th>
+      <th>Imagen</th>
+     
+      </table>
+    </div>
+  </div>
+</div>
+ 
+</body>
+</html>
