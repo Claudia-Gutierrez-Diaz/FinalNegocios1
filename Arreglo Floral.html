@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo Floral</title>
+    <link rel="icon" href="imgs/Logo tienda.jpg" type="image/jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-producto.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TD43CH0GS7"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-TD43CH0GS7');
+</script>
+
+<body>
+    <header>
+        <div class="header-seccion1">
+
+            <a href="#" class="enlace-hs1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="20" height="20"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="#676767" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                </svg>
+                Mi cuenta
+            </a>
+            <a href="#" class="enlace-hs1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart-filled" width="20"
+                    height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#676767" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+                        stroke-width="0" fill="currentColor" />
+                </svg>
+                Lista de deseos
+            </a>
+            <a href="#" class="enlace-hs1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="20"
+                    height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#676767" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                    <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                    <path d="M17 17h-11v-14h-2" />
+                    <path d="M6 5l14 1l-1 7h-13" />
+                </svg>
+                Carrito de compras
+            </a>
+
+        </div>
+
+        <div class="header-seccion2">
+
+            <a href='/'>
+                <img src="imgs/Logo tienda.jpg" alt="Logo" id="logo">
+            </a>
+
+            <div class="barra-busqueda">
+                <input type="text" placeholder="Buscar">
+
+                <button type="submit" class="boton">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="20"
+                        height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#676767" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M21 21l-6 -6" />
+                    </svg>
+
+                </button>
+            </div>
+
+            <div id="boton-carro">
+                <button type="button" class="boton">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 17h-11v-14h-2" />
+                        <path d="M6 5l14 1l-1 7h-13" />
+                    </svg>
+                    Artículos
+                </button>
+            </div>
+
+        </div>
+
+    </header>
+
+    <nav>
+
+        <div class="div-nav">
+            <a href="Productos.html">Todos los productos</a>
+            <a href="Vasos & Termos.html">Vasos y Termos</a>
+            <a href="Arreglos Florales.html">Arreglos Florales</a>
+            <a href="Centros de mesa.html">Centros de Mesa</a>
+            <a href="Otros.html">Otros</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="seccion_1-main">
+
+            <img src="imgs/img6.jpg" alt="Vaso tipo Starbucks">
+            <div>
+                <p>
+                    Arreglo Floral
+                    <br><br><span>Codigo del Producto: A045 <br> Disponiblidad: 60</span> <br>
+                    $200 <br> <br>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="24"
+                            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#676767" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                        </svg>
+                    </button>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-switch-horizontal"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#676767" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M16 3l4 4l-4 4" />
+                            <path d="M10 7l10 0" />
+                            <path d="M8 13l-4 4l4 4" />
+                            <path d="M4 17l9 0" />
+                        </svg>
+                    </button>
+                    <br>
+                    <label for="qty">Cantidad: </label>
+                    <input type="number" id="qty" min="1" max="10">
+                    <br>
+
+                </p>
+            </div>
+            
+        </section>
+
+        <section class="seccion_2-main">
+            <p class="parrafo">
+                Información del artículo
+            </p>
+            <p>
+                Detalles del artículo <br>
+                Arreglo floral chico, variedad de flores de temporada
+            </p>
+            <p class="parrafo">
+                Especificaciones
+            </p>
+            <p>
+                Largo del Producto Armado: 60 cm <br>
+                Altura del Producto Armado: 230 cm <br>
+                Palabras clave: arreglo floral <br>
+                País de Origen: Mexico <br>
+                Peso del Producto Armado: 2 Kg <br>
+                Contenido del empaque: 1 arreglo floral
+            </p>
+        </section>
+
+        <section class="seccion_3-main">
+           <br> <div id="paypal-button-container" style="text-align: right" ></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div>
+            <p>Información</p>
+            <div class="columna1-footer">
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Acerca de nosotros</a>
+                <a href="#">Política de privacidad</a>
+            </div>
+
+        </div>
+
+        <div class="columna2-footer">
+            <p>Servicio al cliente</p>
+            <a href="#">Contáctanos</a>
+            <a href="https://www.facebook.com/PuffuLiz?mibextid=ZbWKwL">
+                <img src="./imgs/face.png" alt="Logo de facebook" width="100px" height="90px">
+            </a>
+        </div>
+
+    </footer>
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=ASuwxUkjjKqITuT3choBCuP3KuJCmLCiEMd2FwmC_Kfzb7A2maAWCGIYz77G0avkNHRCxGsc6T8vyNMO"></script>
+
+    <script>
+        paypal.Buttons({
+            style: {
+                
+                color: 'blue',
+                shape: 'pill',
+                label: 'pay',
+                
+            },
+            createOrder: function (data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '699.00' // Puedes cambiar esto al monto que necesites
+                        }
+                    }]
+                });
+            },
+
+
+            onApprove: function (data, actions) {
+                actions.order.capture().then(function (detalles) {
+                    console.log(detalles);
+                });
+            },
+
+            onCancel: function (data) {
+                alert("Pago cancelado");
+                console.log(data);
+            }
+
+        }).render('#paypal-button-container')
+    </script>
+</body>
+
+</html>
